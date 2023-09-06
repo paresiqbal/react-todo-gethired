@@ -4,7 +4,7 @@ import Layout from "../layout/Layout";
 import { httpServices } from "../services/httpServices";
 import { BsPlusLg, BsPencil, BsTrash } from "react-icons/bs";
 import { BiChevronLeft } from "react-icons/bi";
-import { GoPrimitiveDot } from "react-icons/go";
+import { GoAlert } from "react-icons/go";
 import { RiArrowUpDownFill } from "react-icons/ri";
 import {
   HiOutlineSortAscending,
@@ -263,7 +263,7 @@ export default function Detail() {
                         defaultChecked={item.is_active === 0}
                         onClick={(e) => handleCheckboxTodo(e, item.id)}
                       />
-                      <GoPrimitiveDot
+                      <GoAlert
                         className={
                           item.priority === "very-high"
                             ? "text-[#ED4C5C]"
