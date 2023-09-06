@@ -1,4 +1,4 @@
-export default function Modal({ openModal, closeModal, children }) {
+export default function Modal({ openModal, children }) {
   return (
     <div>
       {openModal ? (
