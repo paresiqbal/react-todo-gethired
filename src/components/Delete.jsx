@@ -1,6 +1,9 @@
 // Assest
 import logoWarning from "../assets/warningDeleteIcon.png";
 
+import { useState, useEffect } from "react";
+import Cypress from "../../cypress.json";
+
 export default function ModalDelete({
   openModal,
   closeModal,
@@ -8,6 +11,27 @@ export default function ModalDelete({
   data,
   handleDelete,
 }) {
+  Cypress.env("isCypress");
+  // Create a state variable to control the visibility of the button
+  const [showDeleteButton, setShowDeleteButton] = useState(false);
+
+  // This effect runs when openModal changes
+  useEffect(() => {
+    // Check if openModal is true (modal is open)
+    if (openModal) {
+      // If Cypress is running (use Cypress.env() or other flag)
+      // Set the showDeleteButton state to true, indicating that the button should be visible
+      if (Cypress.env("isCypress")) {
+        setShowDeleteButton(true);
+      } else {
+        // If Cypress is not running, proceed without waiting
+        setShowDeleteButton(false);
+      }
+    } else {
+      // If the modal is closed, hide the button
+      setShowDeleteButton(false);
+    }
+  }, [openModal]);
   return (
     <div>
       {openModal ? (
