@@ -4,7 +4,7 @@ import Select from "react-select";
 
 // Icons
 import { AiOutlineClose } from "react-icons/ai";
-import { GoAlert } from "react-icons/go";
+import { GoDotFill } from "react-icons/go";
 import { httpServices } from "../services/httpServices";
 
 export default function AddTodo({ openModal, closeModal, data, isEdit }) {
@@ -16,7 +16,7 @@ export default function AddTodo({ openModal, closeModal, data, isEdit }) {
       value: "very-high",
       label: (
         <div className="flex gap-3">
-          <GoAlert className="text-2xl text-[#ED4C5C]" /> Very High
+          <GoDotFill className="text-2xl text-[#ED4C5C]" /> Very High
         </div>
       ),
     },
@@ -24,7 +24,7 @@ export default function AddTodo({ openModal, closeModal, data, isEdit }) {
       value: "high",
       label: (
         <div className="flex gap-3">
-          <GoAlert className="text-2xl text-[#F8A541]" /> High
+          <GoDotFill className="text-2xl text-[#F8A541]" /> High
         </div>
       ),
     },
@@ -32,7 +32,7 @@ export default function AddTodo({ openModal, closeModal, data, isEdit }) {
       value: "normal",
       label: (
         <div className="flex gap-3">
-          <GoAlert className="text-2xl text-[#00A790]" /> Medium
+          <GoDotFill className="text-2xl text-[#00A790]" /> Medium
         </div>
       ),
     },
@@ -40,7 +40,7 @@ export default function AddTodo({ openModal, closeModal, data, isEdit }) {
       value: "low",
       label: (
         <div className="flex gap-3">
-          <GoAlert className="text-2xl text-[#428BC1]" /> Low
+          <GoDotFill className="text-2xl text-[#428BC1]" /> Low
         </div>
       ),
     },
@@ -48,7 +48,7 @@ export default function AddTodo({ openModal, closeModal, data, isEdit }) {
       value: "very-low",
       label: (
         <div className="flex gap-3">
-          <GoAlert className="text-2xl text-[#8942C1]" /> Very Low
+          <GoDotFill className="text-2xl text-[#8942C1]" /> Very Low
         </div>
       ),
     },
