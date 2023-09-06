@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import DrawerLayout from "../layout/DrawerLayout";
+import Layout from "../layout/Layout";
 import { httpServices } from "../services/httpServices";
 import { BsPlusLg, BsPencil, BsTrash } from "react-icons/bs";
 import { BiChevronLeft } from "react-icons/bi";
@@ -10,9 +10,9 @@ import {
   HiOutlineSortAscending,
   HiOutlineSortDescending,
 } from "react-icons/hi";
-import ModalAddTodo from "../components/ModalAddTodo";
+import AddTodo from "../components/AddTodo";
 import emptyLogo from "../assets/todo-empty-state.png";
-import ModalDelete from "../components/ModalDelete";
+import Delete from "../components/Delete";
 
 export default function Detail() {
   const { id } = useParams();
@@ -133,7 +133,7 @@ export default function Detail() {
   console.log(dataTodos);
 
   return (
-    <DrawerLayout>
+    <Layout>
       <div>
         <header className="flex items-center justify-between">
           <div
@@ -301,7 +301,7 @@ export default function Detail() {
           </>
         )}
       </div>
-      <ModalAddTodo
+      <AddTodo
         openModal={showModal}
         data={data}
         closeModal={() => {
@@ -309,7 +309,7 @@ export default function Detail() {
           loadDataDetail();
         }}
       />
-      <ModalAddTodo
+      <AddTodo
         openModal={showModalEdit}
         isEdit={true}
         data={detailTodo}
@@ -318,12 +318,12 @@ export default function Detail() {
           loadDataDetail();
         }}
       />
-      <ModalDelete
+      <Delete
         openModal={showModalDelete}
         data={detail}
         closeModal={() => setShowModalDelete(false)}
         handleDelete={handleDeleteTodos}
       />
-    </DrawerLayout>
+    </Layout>
   );
 }

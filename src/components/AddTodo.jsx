@@ -7,7 +7,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { GoPrimitiveDot } from "react-icons/go";
 import { httpServices } from "../services/httpServices";
 
-export default function ModalAddTodo({ openModal, closeModal, data, isEdit }) {
+export default function AddTodo({ openModal, closeModal, data, isEdit }) {
   const [selectedOption, setSelectedOption] = useState(null);
   const [title, setTitle] = useState("");
 

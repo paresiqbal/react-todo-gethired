@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import DrawerLayout from "../layout/DrawerLayout";
+import Layout from "../layout/Layout";
 import { BsPlusLg, BsTrash } from "react-icons/bs";
 import { httpServices } from "../services/httpServices";
 import moment from "moment/moment";
 import { useNavigate } from "react-router-dom";
-import ModalDelete from "../components/ModalDelete";
+import Delete from "../components/Delete";
 import Alert from "../components/Alert";
 import emptyActivityList from "../assets/activity-empty-state.png";
 
@@ -58,7 +58,7 @@ export default function Home() {
   };
 
   return (
-    <DrawerLayout>
+    <Layout>
       <header
         data-cy="activity-title"
         className="flex items-center justify-between"
@@ -142,7 +142,7 @@ export default function Home() {
         </>
       )}
 
-      <ModalDelete
+      <Delete
         openModal={showModal}
         closeModal={() => {
           setShowModal(false);
@@ -152,6 +152,6 @@ export default function Home() {
         data={detail}
       />
       <Alert openAlert={showAlert} closeAlert={() => setShowAlert(false)} />
-    </DrawerLayout>
+    </Layout>
   );
 }
