@@ -1,18 +1,22 @@
+// React
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+
+// Layout
 import Layout from "../layout/Layout";
+
+// Icons
 import { httpServices } from "../services/httpServices";
 import { BsPlusLg, BsPencil, BsTrash } from "react-icons/bs";
 import { BiChevronLeft } from "react-icons/bi";
 import { GoAlert } from "react-icons/go";
 import { RiArrowUpDownFill } from "react-icons/ri";
-import {
-  HiOutlineSortAscending,
-  HiOutlineSortDescending,
-} from "react-icons/hi";
+import { HiOutlineSortAscending } from "react-icons/hi";
+
+// Componnsts
 import AddTodo from "../components/AddTodo";
-import emptyLogo from "../assets/todo-empty-state.png";
 import Delete from "../components/Delete";
+import emptyLogo from "../assets/todo-empty-state.png";
 
 export default function Detail() {
   const { id } = useParams();
@@ -27,7 +31,6 @@ export default function Detail() {
   const [showModalDelete, setShowModalDelete] = useState(false);
   const [loading, setLoading] = useState(true);
   const [filterOptions, setFilterOptions] = useState(false);
-  const [selectFilter, setSelectFilter] = useState("");
 
   const loadDataDetail = async () => {
     await httpServices.detailActivity(id).then((res) => {
@@ -163,7 +166,6 @@ export default function Detail() {
           </div>
           <div className="flex gap-3">
             <button
-              // onBlur={() => setFilterOptions(false)}
               onClick={() => setFilterOptions(!filterOptions)}
               className="rounded-full p-3 border border-gray-600 text-gray-600 text-2xl"
             >
