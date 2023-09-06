@@ -36,7 +36,7 @@ export default function ModalDelete({
                 <button
                   onClick={closeModal}
                   className="bg-gray-500 rounded-full px-5 py-2"
-                  data-cy="modal-delete-cancel-button"
+                  data-cy={"modal-delete-cancel-button"}
                 >
                   Batal
                 </button>

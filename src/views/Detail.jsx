@@ -323,7 +323,7 @@ export default function Detail() {
       <Delete
         openModal={showModalDelete}
         data={detail}
-        closeModal={() => setShowModalDelete(true)}
+        closeModal={() => setShowModalDelete(false)}
         handleDelete={handleDeleteTodos}
       />
     </Layout>
