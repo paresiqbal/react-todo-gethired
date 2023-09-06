@@ -1,12 +1,23 @@
+// React
 import { useEffect, useState } from "react";
-import Layout from "../layout/Layout";
-import { BsPlusLg, BsTrash } from "react-icons/bs";
-import { httpServices } from "../services/httpServices";
-import moment from "moment/moment";
 import { useNavigate } from "react-router-dom";
+
+// Layout
+import Layout from "../layout/Layout";
+
+// Components
 import Delete from "../components/Delete";
 import Alert from "../components/Alert";
+
+// Icons and assets
+import { BsPlusLg, BsTrash } from "react-icons/bs";
 import emptyActivityList from "../assets/activity-empty-state.png";
+
+// Service API
+import { httpServices } from "../services/httpServices";
+
+// other library
+import moment from "moment/moment";
 
 export default function Home() {
   const navigate = useNavigate();
