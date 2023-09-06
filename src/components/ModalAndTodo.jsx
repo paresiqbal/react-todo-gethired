@@ -1,5 +1,8 @@
+// React
 import { useState } from "react";
 import Select from "react-select";
+
+// Icons
 import { AiOutlineClose } from "react-icons/ai";
 import { GoPrimitiveDot } from "react-icons/go";
 import { httpServices } from "../services/httpServices";
