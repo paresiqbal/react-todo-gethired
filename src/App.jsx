@@ -1,8 +1,18 @@
+// Rdd
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// Views
+import Home from "./views/Home";
+import Detail from "./views/Detail";
+
 function App() {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/detail/:id" element={<Detail />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
