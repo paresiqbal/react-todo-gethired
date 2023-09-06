@@ -1,9 +1,4 @@
-// React
-import { useEffect, useState } from "react";
-
-// Components
-import Alert from "./Alert";
-import { httpServices } from "../services/httpServices";
+// Assest
 import logoWarning from "../assets/warningDeleteIcon.png";
 
 export default function ModalDelete({
@@ -14,7 +9,7 @@ export default function ModalDelete({
   handleDelete,
 }) {
   return (
-    <>
+    <div>
       {openModal ? (
         <div
           data-cy="activity-item-delete-button"
@@ -59,6 +54,6 @@ export default function ModalDelete({
       ) : (
         ""
       )}
-    </>
+    </div>
   );
 }
